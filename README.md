@@ -1,2 +1,6 @@
 # goto_train
-Задание для изучения Реакта и не только
+Задания для изучения Реакта и не только
+
+[Задание I](https://github.com/thronfolger/goto_train/blob/master/mission_i.md)
+
+[Задание II](https://github.com/thronfolger/goto_train/blob/master/mission_ii.md)
