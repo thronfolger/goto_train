@@ -74,14 +74,9 @@ TodoApp.jsx
         Task.jsx
 ```
 
-Компоненты ниже будут играть роль обертки для:
+Компоненты TodoApp.jsx, LeftMenu.jsx, TaskArea.jsx будут играть роль обертки для:
 
-TodoApp.jsx
-
-LeftMenu.jsx
-
-TaskArea.jsx
-
+Пример рендера для TodoApp.jsx
 
 ```jsx
 render() {
