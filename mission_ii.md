@@ -22,7 +22,7 @@ https://ru.bem.info/methodology/naming-convention/
 Для стилей можно использовать SCSS, а новых версиях create-react-app он идет из коробки. Удобно использовать вложенность и &:
 https://marksheet.io/sass-nesting.html
 
-```
+```jsx
 <div className="Clock">
   <div className="Clock__unit Clock__hours">22</div>
   <div className="Clock__unit Clock__minutes">41</div>
@@ -30,7 +30,7 @@ https://marksheet.io/sass-nesting.html
 </div>
 ```
 
-```
+```scss
 .Clock {
 
   &__unit {
@@ -83,7 +83,7 @@ LeftMenu.jsx
 TaskArea.jsx
 
 
-```
+```jsx
 render() {
 
   return (
@@ -95,7 +95,7 @@ render() {
 }
 ```
 
-```
+```jsx
 <TodoApp>
 
   <LeftMenu>
