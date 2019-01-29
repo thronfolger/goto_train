@@ -74,15 +74,17 @@ TodoApp.jsx
         Task.jsx
 ```
 
-Компоненты TodoApp.jsx, LeftMenu.jsx, TaskArea.jsx будут играть роль обертки для:
+ReduxExampleApp.js переименовать в TodoApp.jsx
 
-Пример рендера для TodoApp.jsx
+Компоненты LeftMenu.jsx, TaskArea.jsx будут играть роль обертки для:
+
+Пример рендера для LeftMenu.jsx
 
 ```jsx
 render() {
 
   return (
-      <div className="TodoApp">
+      <div className="LeftMenu">
         {this.props.children}
       </div>
   );
@@ -91,7 +93,7 @@ render() {
 ```
 
 ```jsx
-<TodoApp>
+<div className="TodoApp">
 
   <LeftMenu>
     <FolderList />
@@ -102,5 +104,5 @@ render() {
     <TaskList />
   </TaskArea>
 
-</TodoApp>
+</div>
 ```
