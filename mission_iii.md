@@ -16,7 +16,7 @@ const initialState = {
 ```
 
 Кстати, можно переименовать secondReducer, дав более осмысленное название.
-Я заменил switch на условие if для наглядности.
+Также заменил switch на условие if для наглядности.
 
 ```js
 function secondReducer(state = initialState, action = {}) {
