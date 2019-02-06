@@ -6,7 +6,7 @@
 
 Загружать в store будем тестовые данные, по запросу выдаются тут: https://api.myjson.com/bins/w4fr4
 
-Для начала подготовим редьюсер secondReducer.js, предустановим его state:
+Для начала подготовим редьюсер todoReducer.js, предустановим его state:
 
 ```js
 const initialState = {
@@ -15,11 +15,10 @@ const initialState = {
 };
 ```
 
-Кстати, можно переименовать secondReducer, дав более осмысленное название.
 Также заменил switch на условие if для наглядности.
 
 ```js
-function secondReducer(state = initialState, action = {}) {
+function todoReducer(state = initialState, action = {}) {
 
     // Когда будет вызван dispatch({ type: 'FILL_STATE', payload: { folders: [...], tasks: [...] } })
     // Будет выполнено следующие условие
@@ -32,7 +31,7 @@ function secondReducer(state = initialState, action = {}) {
     // Если никакой action.type не удовлетворил условие, то возвращается state без изменения
     // Экшены проходят через все редьюсеры, которые добавили в приложение, и не все экшены могут интересовать нашь редьюсер
     // В итоге редьюсер думает: если экшн с таким типом меня не инстересует, то я верну свое текущее состояние
-    // Если не вернуть state, то функция secondReducer вернет по-умолчанию undefined и значением state будет undefined
+    // Если не вернуть state, то функция todoReducer вернет по-умолчанию undefined и значением state будет undefined
     return state;
 
 }
@@ -46,7 +45,7 @@ function secondReducer(state = initialState, action = {}) {
 
 2) Отобразить данные
 
-Сначала нужно прокинуть данные в компоненты c помощью mapStateToProps: FolderList с state.secondReducer.folders и TaskList с state.secondReducer.tasks.
+Сначала нужно прокинуть данные в компоненты c помощью mapStateToProps: FolderList с state.todoReducer.folders и TaskList с state.todoReducer.tasks.
 
 Потом как обычно в render используя map вывести списки данных.
 
@@ -56,7 +55,7 @@ function secondReducer(state = initialState, action = {}) {
 
 В нашем случае мы можем вынести fetch из componentDidMount. Нашему компоненту все равно как загружаются данные, нечего его захламлять.
 
-Куда же можно вынести fetch? Есть соблазн засунуть туда, где эти данные потом сохраняем, то есть в secondReducer.
+Куда же можно вынести fetch? Есть соблазн засунуть туда, где эти данные потом сохраняем, то есть в todoReducer.
 
 ```js
 if (action.type === 'FILL_STATE') {
