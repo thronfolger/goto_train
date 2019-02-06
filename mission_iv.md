@@ -25,7 +25,7 @@ function uiReducer(state = initialState, action = {}) {
 
 Потом добавить экшн креатор initCurrentFolder используя thunk.
 Внутри initCurrentFolder вызывать const state = getState(); из state брать первое название папки элементи из свойства folders.
-Это название использовать в экшене сделав dispatch({type: 'SET_CURRENT_FOLDER', payload: { currentFolder: ИМЯ_ПАПКИ }})
+Это название использовать в экшене сделав dispatch({type: 'SET_CURRENT_FOLDER', payload: { folderName: ИМЯ_ПАПКИ }})
 
 Так теперь нам нужено после loadTodoData сделать dispatch(initCurrentFolder()).
 loadTodoData асинхронный, дожидаться его выполнения будем используя промисы.
@@ -35,12 +35,12 @@ loadTodoData асинхронный, дожидаться его выполне�
 // TodoApp.jsx
 
 dispatch(loadTodoData())
-  .then(dispatch(initCurrentFolder()))
+  .then( () => { dispatch(initCurrentFolder())  })
 ```
 
 Далее в компонент FolderList нужно прокинуть currentFolder и выделить цветом выбранную папку. Компоненту Folder понадобятся два пропса: selected и folderName;
 
-При клике на компонент Folder нужно делать dispatch({type: 'SET_CURRENT_FOLDER', payload: { currentFolder: ИМЯ_ПАПКИ }})
+При клике на компонент Folder нужно делать dispatch({type: 'SET_CURRENT_FOLDER', payload: { folderName: ИМЯ_ПАПКИ }})
 Для SET_CURRENT_FOLDER лучше сделать обычный экшн креатор setCurrentFolder(currentFolder)
 
 В TaskList.jsx в map выводить только те задачи у которых folder соответствует currentFolder.
