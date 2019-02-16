@@ -1,17 +1,26 @@
 # Задание I
 
-1) Добавить репозиторий и склонировать к себе на локальную машину
+1) Создать новый репозиторий в Github и склонировать его к себе на локальную машину
 
 2) Сделать заготовку для будущего приложения используя create-react-app
+
+3) Добавить пакеты (npm install) react-redux и redux-thunk
+
+4) Заготовка для приложения есть тут: https://github.com/thronfolger/react_learn/tree/todo
+Необходимо скопировать ее в свое приложение
+
+5) Запустить приложение для проверки (npm start)
+
+6) Итог вылить в свой репозиторий на GitHub
+
+Можно почитать перед выполнением:
 
 - https://github.com/facebook/create-react-app
 
 - https://monsterlessons.com/project/lessons/react-pishem-prostoy-komponent-s-pomoshyu-react-create-app
 
-3) Добавить пакеты (npm install) react-redux и redux-thunk (позже пригодится)
+- https://habr.com/ru/post/269831/
 
-4) Подключить redux и thunk по аналогии с https://github.com/thronfolger/react_learn/tree/master/src/ (оставить только secondReducer)
-
-5) Итог вылить в свой репозиторий на GitHub
-
-Важно: весь код пишем ручками, не копи-пастим!
+```
+Совет: код переписывать не делая copy-paste.
+```
