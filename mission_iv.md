@@ -17,7 +17,7 @@ function uiReducer(state = initialState, action = {}) {
 }
 ```
 
-У нас уже есть один редьюсер secondReducer, стейт которого мы используем для хранения папок и задач. (secondReducer, которому вы надеюсь дали более понятное имя?)
+У нас уже есть один редьюсер todoReducer, стейт которого мы используем для хранения папок и задач.
 Необходимо добавить uiReducer, и не забыть добабвить в combineReducers({ ui: uiReducer, ... })
 
 Далее добавить экшн SET_CURRENT_FOLDER, payload будет содержать свойства folderName.
