@@ -10,3 +10,5 @@
 [Задание IV](https://github.com/thronfolger/goto_train/blob/master/mission_iv.md)
 
 [Задание V](https://github.com/thronfolger/goto_train/blob/master/mission_v.md)
+
+[Задание VI](https://github.com/thronfolger/goto_train/blob/master/mission_vi.md)
